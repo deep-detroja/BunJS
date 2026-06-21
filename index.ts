@@ -29,43 +29,53 @@
 //03 - file i/o
 
 
-const file = Bun.file("./02-File-IO/user.txt");
-console.log(file.size); // size of file in bits
-console.log(file.type)
-console.log(file.name);
-const isFileExist = await file.exists();
-console.log(isFileExist);
+// const file = Bun.file("./02-File-IO/user.txt");
+// console.log(file.size); // size of file in bits
+// console.log(file.type)
+// console.log(file.name);
+// const isFileExist = await file.exists();
+// console.log(isFileExist);
 
-//write content in file
-const data = "Hii Deep Welcome back";
-const fileSize = await Bun.write("./02-File-IO/user2.txt",data);
-console.log(fileSize);
+// //write content in file
+// const data = "Hii Deep Welcome back";
+// const fileSize = await Bun.write("./02-File-IO/user2.txt",data);
+// console.log(fileSize);
 
-//copy file
+// //copy file
 
-const oldFile= Bun.file("./02-File-IO/user2.txt");
-const newFile = Bun.file("./02-File-IO/copy-user2.txt");
+// const oldFile= Bun.file("./02-File-IO/user2.txt");
+// const newFile = Bun.file("./02-File-IO/copy-user2.txt");
 
-await Bun.write(newFile,oldFile);
+// await Bun.write(newFile,oldFile);
 
-// ----------------------------------// ----------------------------------// ----------------------------------
+// // ----------------------------------// ----------------------------------// ----------------------------------
 
-// File IO API
+// // File IO API
 
-import fs from "fs";
+// import fs from "fs";
 
-fs.mkdir("03-File-API",(err)=>{
-if(err){
-    console.log(err);
-}
-console.log("File Created")
-})
+// fs.mkdir("03-File-API",(err)=>{
+// if(err){
+//     console.log(err);
+// }
+// console.log("File Created")
+// })
 
-//Get files
+// //Get files
 
-fs.readdir("03-File-API",(err,file)=>{
-    if(err){
-        console.log(err)
-    }
-    console.log(file);
-})
+// fs.readdir("03-File-API",(err,file)=>{
+//     if(err){
+//         console.log(err)
+//     }
+//     console.log(file);
+// })
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// 04 - import meta
+
+console.log(import.meta.dir); //same like __dirname
+console.log(import.meta.env);  // all environment variabales
+
+console.log(import.meta.file); // current file like "index.ts"
+console.log(import.meta.path);
