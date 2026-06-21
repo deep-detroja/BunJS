@@ -1,5 +1,6 @@
 // 01- files import 
 
+
 // import  info  from "./01_Read File/info.txt";
 // import user from "./01_Read File/user.json"
 // import { makeName } from "./01_Read File/module";
@@ -74,8 +75,29 @@
 
 // 04 - import meta
 
-console.log(import.meta.dir); //same like __dirname
-console.log(import.meta.env);  // all environment variabales
+// console.log(import.meta.dir); //same like __dirname
+// console.log(import.meta.env);  // all environment variabales
 
-console.log(import.meta.file); // current file like "index.ts"
-console.log(import.meta.path);
+// console.log(import.meta.file); // current file like "index.ts"
+// console.log(import.meta.path); // full path 
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//05- Password Hashing => bun js provides inbuilt library like bcrypt,argon2d,argon2id and argon2i . so do not need to install it externally
+
+// import { hash } from "bun";
+
+// const password="Admin123";
+
+// //Hash method 
+// const hashedPass = await Bun.password.hash(password,{ //awaited because is returns promise
+//     algorithm:"bcrypt",
+//     cost:5 // similar like salt in bcryptJS
+// })
+// console.log(hashedPass)
+
+// //verify method
+// const isValidPassword = await Bun.password.verify(password,hashedPass);
+// console.log(isValidPassword);
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
