@@ -118,23 +118,27 @@
 
 // 07 - HTTP 
 
-import { serve } from "bun";
+// import { serve } from "bun";
 
-const server = Bun.serve({ // creates server
-    port:5500,
-    routes:{
-        //static route
-        "/api/health": new Response("status OK"),
+// const server = Bun.serve({ // creates server
+//     port:5500,
+//     routes:{
+//         //static route
+//         "/api/health": new Response("status OK"),
 
-        "/api/:id":(req)=>{
-            return new Response(`Id is :` + req.params.id);
-        },
+//         "/api/:id":(req)=>{
+//             return new Response(`Id is :` + req.params.id);
+//         },
 
-        // to handle all other routes
-        "/*": new Response("Route not Found",{
-            status:404,
-        }),
-    },
-})
+//         // to handle all other routes
+//         "/*": new Response("Route not Found",{
+//             status:404,
+//         }),
+//     },
+// })
 
-console.info(`Server is running on port`,server.port)
+// console.info(`Server is running on port`,server.port)
+
+//**NOTE : Learn All CRUD and etc from Docs
+
+////////////////////////////////////////////////////////////////////////////////////////////////
