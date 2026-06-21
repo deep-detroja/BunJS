@@ -1,6 +1,4 @@
 // 01- files import 
-
-
 // import  info  from "./01_Read File/info.txt";
 // import user from "./01_Read File/user.json"
 // import { makeName } from "./01_Read File/module";
@@ -114,3 +112,29 @@
 // console.log("Deep")
 
 // console.log(Bun.nanoseconds()); // time in nano seconds that bun take to run all code
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+
+// 07 - HTTP 
+
+import { serve } from "bun";
+
+const server = Bun.serve({ // creates server
+    port:5500,
+    routes:{
+        //static route
+        "/api/health": new Response("status OK"),
+
+        "/api/:id":(req)=>{
+            return new Response(`Id is :` + req.params.id);
+        },
+
+        // to handle all other routes
+        "/*": new Response("Route not Found",{
+            status:404,
+        }),
+    },
+})
+
+console.info(`Server is running on port`,server.port)
