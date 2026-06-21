@@ -101,3 +101,16 @@
 // console.log(isValidPassword);
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// 06-Utilities
+
+// console.log(Bun.version);
+// console.log(Bun.env);
+
+// //sleep function => same as settimeout function
+// console.log("Hey");
+// Bun.sleep(5*1000);
+// console.log("Deep")
+
+// console.log(Bun.nanoseconds()); // time in nano seconds that bun take to run all code
